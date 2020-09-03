@@ -1,0 +1,6 @@
+### Ignored folders and files ###
+.DS_Store
+.git/
+node_modules/
+.vscode
+dist/
