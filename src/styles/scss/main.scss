@@ -6,6 +6,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.btn-primary {
+  background-color: $theme-color;
+  border: 0;
+}
+
 // Header
 .site-header {
   .navbar {
@@ -112,7 +117,7 @@ body {
     }
   }
 
-  .row {
+  .product-row {
     margin-top: 60px;
   }
 }
@@ -200,7 +205,74 @@ body {
 }
 
 .custom-donate {
+  margin: 20px 0;
   border-radius: 20px;
   box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 10%;
+
+  @include respond-to("lg") {
+    margin: 60px 0;
+    padding: 35px 50px;
+  }
+
+  p {
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 1rem;
+    color: $theme-color;
+    font-weight: 700;
+  }
+
+  .col-md-7,
+  .col-md-5 {
+    text-align: center;
+
+    @include respond-to("lg") {
+      text-align: left;
+    }
+  }
+
+  input {
+    border: 0;
+    background: #f3f3f3;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: transparent;
+      box-shadow: none;
+      background: #f3f3f3;
+    }
+  }
+
+  .input-group {
+    margin: 30px 0;
+
+    @include respond-to("lg") {
+      margin: 0;
+    }
+  }
+
+  .input-group-text {
+    background-color: #add3e1;
+    border: 0;
+    font-weight: 700;
+  }
+
+  .btn-mobile {
+    @include respond-to("lg") {
+      display: none;
+    }
+  }
+
+  .btn-desktop {
+    display: none;
+    @include respond-to("lg") {
+      display: inline;
+    }
+  }
 }
