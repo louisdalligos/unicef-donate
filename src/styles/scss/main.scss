@@ -75,6 +75,15 @@ body {
     background-repeat: no-repeat;
     padding: 10% 0;
   }
+
+  h2,
+  p {
+    text-align: left;
+
+    @include respond-to("lg") {
+      text-align: center;
+    }
+  }
 }
 
 .x85lsu8lZie {
@@ -105,7 +114,16 @@ body {
 .home-how-it-works {
   padding: 8% 0 40px;
 
-  h2 {
+  .title,
+  .subtitle {
+    text-align: left;
+
+    @include respond-to("lg") {
+      text-align: center;
+    }
+  }
+
+  .title {
     color: $theme-color;
   }
 
@@ -128,6 +146,58 @@ body {
 
   .footer-logo {
     height: 40px;
+  }
+
+  .footer-info {
+    text-align: right;
+    a {
+      color: #fff;
+      font-size: 0.8rem;
+    }
+
+    .social-links {
+      a {
+        background-color: #fff;
+        color: $theme-color;
+        width: 18px;
+        border-radius: 3px;
+        display: inline-block;
+        text-align: center;
+      }
+    }
+
+    .legal {
+      @include respond-to("lg") {
+        display: flex;
+
+        small {
+          line-height: 27px;
+          margin-left: 5px;
+        }
+      }
+
+      li {
+        margin-right: 0;
+
+        &:after {
+          content: "|";
+          color: #fff;
+          padding-left: 5px;
+        }
+
+        &:last-child {
+          &:after {
+            content: "";
+            padding-left: 0;
+          }
+        }
+      }
+    }
+
+    small {
+      display: inherit;
+      color: #fff;
+    }
   }
 }
 
@@ -232,6 +302,12 @@ body {
 
     @include respond-to("lg") {
       text-align: left;
+    }
+
+    .btn {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 500;
     }
   }
 
