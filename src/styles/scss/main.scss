@@ -1,2 +1,107 @@
+@import "_variables";
+@import "_mixins";
+
+html,
 body {
+  font-family: "Roboto", sans-serif;
+}
+
+// Header
+.site-header {
+  .navbar {
+    background-color: $theme-color;
+    padding: 0.8rem 1rem;
+  }
+}
+
+.home-banner {
+  .cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    color: #fff;
+    margin-top: -2px;
+  }
+
+  .banner-text {
+    //width: 40%;
+
+    h1 {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.home-about-basket {
+  position: relative;
+  width: 100%;
+
+  &:after {
+    content: "";
+    background-image: url("../../assets/images/handwithbasket.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 180px;
+    height: 200px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+
+    @include respond-to("md") {
+      width: 280px;
+      height: 300px;
+    }
+
+    @include respond-to("lg") {
+      display: none;
+    }
+  }
+
+  .inner {
+    background-color: #add3e1;
+    background-repeat: no-repeat;
+    padding: 10% 0;
+  }
+}
+
+.x85lsu8lZie {
+  position: relative;
+
+  &:after {
+    @include respond-to("lg") {
+      content: "";
+      background-image: url("../../assets/images/handwithbasket.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      position: absolute;
+      bottom: 27%;
+      right: 0;
+      width: 447px;
+      height: 557px;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";
+    }
+  }
+}
+
+.site-footer {
+  padding: 10px 20px;
+  background-color: $theme-color;
+
+  .footer-logo {
+    height: 40px;
+  }
 }
