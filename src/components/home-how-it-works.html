@@ -1,4 +1,4 @@
-<section class="home-how-it-works">
+<section id="donate-now" class="home-how-it-works">
   <div class="container">
     <h2 class="title">How it works</h2>
     <p class="subtitle">
@@ -95,6 +95,7 @@
               <p class="d-none d-lg-block mb-3">
                 <strong>Enter your own donation amount:</strong>
               </p>
+              <!-- add .has-error class for error -->
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">P</span>
@@ -104,6 +105,11 @@
                   <button class="btn btn-primary btn-desktop" type="button">
                     Donate Now
                   </button>
+                </div>
+
+                <div class="invalid-feedback">
+                  <i class="fa fa-info-circle"></i>Kindly input a minimum amount
+                  of P300.
                 </div>
               </div>
               <a class="btn btn-primary btn-mobile" href="#" role="button"

@@ -4,6 +4,16 @@
 html,
 body {
   font-family: "Roboto", sans-serif;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
 }
 
 .btn-primary {
@@ -20,6 +30,7 @@ body {
 }
 
 .home-banner {
+  position: relative;
   .cover {
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,6 +45,29 @@ body {
 
     h1 {
       text-transform: uppercase;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.4rem;
+
+      @include respond-to("lg") {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  #arrow-down {
+    position: absolute;
+    bottom: 12%;
+    right: 5%;
+
+    img {
+      width: 30px;
+    }
+
+    @include respond-to("lg") {
+      img {
+        width: 40px;
+      }
     }
   }
 }
@@ -82,6 +116,17 @@ body {
 
     @include respond-to("lg") {
       text-align: center;
+    }
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  p {
+    @include respond-to("lg") {
+      width: 74%;
+      margin: auto;
     }
   }
 }
@@ -232,7 +277,10 @@ body {
   .card-img,
   .card-img-top {
     border-radius: 20px;
-    min-height: 245px;
+
+    @include respond-to("lg") {
+      min-height: 245px;
+    }
   }
 
   .card-body {
@@ -350,5 +398,31 @@ body {
     @include respond-to("lg") {
       display: inline;
     }
+  }
+}
+
+/* Forms */
+.has-error {
+  color: #ff0000;
+
+  .invalid-feedback {
+    font-style: italic;
+    color: #ff0000;
+  }
+
+  .input-group-text {
+    background-color: #ff0000;
+    color: #fff;
+  }
+
+  .form-control {
+    border: 1px solid #ff0000;
+  }
+
+  .fa {
+    margin-right: 5px;
+    font-size: 17px;
+    position: relative;
+    top: 2px;
   }
 }
