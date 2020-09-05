@@ -24,4 +24,18 @@ $(document).ready(function () {
       );
     }
   });
+
+  $(".payment-method-option").on("click", function () {
+    var paymentValue = $(this).find("input").val();
+
+    $('input:radio[name="payment-method"]').val([paymentValue]);
+
+    $(".payment-method-option").each(function (index, value) {
+      if (paymentValue === $(value).find("input").val()) {
+        $(this).addClass("selected");
+      } else {
+        $(this).removeClass("selected");
+      }
+    });
+  });
 });
