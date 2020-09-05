@@ -3,19 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Unicef Donate</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
     <meta name="viewport" content="width=device-width,initial- scale=1" />
     <%= require('html-loader!./partials/head.html') %>
   </head>
   <body class="d-flex flex-column h-100">
     <%= require('html-loader!./partials/header.html') %>
     <main role="main" class="flex-shrink-0">
-      <%= require('html-loader!./components/banner.html') %>
-
-      <div class="x85lsu8lZie">
-        <%= require('html-loader!./components/home-about-basket.html') %> <%=
-        require('html-loader!./components/home-how-it-works.html') %>
-      </div>
+      <h2>Checkout</h2>
     </main>
     <%= require('html-loader!./partials/footer.html') %>
   </body>

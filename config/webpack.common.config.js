@@ -57,8 +57,21 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack 4 Starter",
-      template: "./src/index.html",
+      title:
+        "UNICEF Basket of Hope-Donate and Give Hope to Children This Christmas",
+      template: "./src/html/index.html",
+      filename: "index.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title:
+        "UNICEF Basket of Hope-Donate and Give Hope to Children This Christmas",
+      template: "./src/html/checkout.html",
+      filename: "checkout.html",
       inject: true,
       minify: {
         removeComments: true,
