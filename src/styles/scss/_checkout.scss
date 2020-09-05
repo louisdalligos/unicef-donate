@@ -1,8 +1,6 @@
 .checkout-section {
-
-
     @include respond-to("lg") {
-        height: 100vh;
+        //height: 100vh;
     }
 
     .donate-label {
@@ -42,11 +40,15 @@
                 display: flex;
 
                 .label {
-                    margin: 8px 10px 0;
+                    margin: 8px 20px 8px 0;
 
                     span {
                         line-height: normal;
                         display: inline;
+                        font-size: inherit;
+                    }
+
+                    strong {
                         font-size: inherit;
                     }
                 }
@@ -60,7 +62,7 @@
 
         @include respond-to("lg") {
             padding-top: 50px;
-            padding-left: 10%;
+            padding-left: 9%;
         }
     }
 
@@ -116,6 +118,21 @@
         font-size: 1.2rem;
         color: $theme-color;
         margin: 0;
+        text-align: center;
+
+        @include respond-to("lg") {
+            text-align: left;
+        }
+    }
+
+    .req-label {
+        text-align: center;
+        display: block;
+        margin-bottom: 10px;
+
+        @include respond-to("lg") {
+            text-align: left;
+        }
     }
 }
 
@@ -125,7 +142,8 @@
     margin: 20px auto;
 
     @include respond-to("lg") {
-        margin: 0
+        margin: 0;
+        height: 45px;
     }
 
     .input-group-prepend {
@@ -159,6 +177,10 @@
         &:focus {
             box-shadow: none;
         }
+
+        @include respond-to("lg") {
+            height: 45px;
+        }
     }
 }
 
@@ -166,5 +188,76 @@
     a {
         text-decoration: underline;
         color: $black;
+    }
+}
+
+.parsley-form {
+    .col-sm-6 {
+        &:first-child {
+            @include respond-to("sm") {
+                padding-right: 7px;
+            }
+        }
+
+        &:last-child {
+            @include respond-to("sm") {
+                padding-left: 7px;
+            }
+        }
+
+        .form-fieldset {
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+    }
+
+
+
+    input {
+        width: 100%;
+        border: 0;
+        background-color: #f3f3f3;
+        padding: 10px;
+        border-radius: 12px;
+        font-size: 0.875rem;
+
+        @include respond-to("sm") {
+            border-radius: 5px;
+        }
+    }
+
+    .parsley-errors-list {
+        list-style: none;
+        margin: 0 0 0 10px;
+        padding: 0;
+        font-size: 0.875rem;
+        color: red;
+    }
+}
+
+.action-btn {
+    margin: 50px 0;
+
+    .btn {
+        font-size: 0.875rem;
+        display: block;
+        margin: auto;
+
+        @include respond-to("sm") {
+            display: inline;
+            margin: 0;
+        }
+    }
+
+    .btn-primary {
+        padding-left: 45px;
+        padding-right: 45px;
+        text-transform: uppercase;
+    }
+
+    .btn-link {
+        color: $black;
+
+        text-decoration: underline;
     }
 }

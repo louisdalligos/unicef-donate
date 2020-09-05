@@ -1,0 +1,141 @@
+<div class="register-form">
+    <h3 class="widget-title">Personal Information</h3>
+    <small class="req-label">*These fields are required.</small>
+
+    <div id="reg-form" class="parsley-form row">
+      <div class="col-sm-6">
+        <fieldset class="form-fieldset">
+          <input
+            type="text"
+            name="donor[first_name]"
+            class="form-input"
+            placeholder="First Name*"
+            required
+            data-parsley-required-message="This field is required."
+            data-parsley-trigger="focusout">
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <input
+            type="text"
+            name="donor[last_name]"
+            class="form-input"
+            placeholder="Last Name*"
+            required
+            data-parsley-required-message="This field is required."
+            data-parsley-trigger="focusout">
+        </fieldset>
+      </div>
+      <div class="col-sm-6">
+        <fieldset class="form-fieldset">
+          <div class="form-mobile-input-grp">
+            <input
+              type="number"
+              name="donor[mobile_number]"
+              id="mobile-number"
+              class="form-input -mobilenumber"
+              required
+              placeholder="Mobile Number*"
+              maxlength="18"
+              minlength="08"
+              value=""
+              pattern="^([0-9]{08,18})$"
+              data-parsley-pattern-message="This mobile number format is not recognized. Please input a valid mobile country code format 00 000 000000."
+              data-parsley-required-message="This field is required"
+              data-parsley-trigger="focusout"
+              oninput="
+              javascript:
+                if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+            </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <input
+            class="form-input"
+            name="donor[email_address]"
+            type="email"
+            placeholder="Email*"
+            required
+            data-parsley-required-message="This field is required."
+            data-parsley-trigger="focusout">
+        </fieldset>
+
+      </div>
+      <!-- <h3 class="widget-title">Payment Method</h3>
+
+      <fieldset class="form-fieldset full">
+        <div class="payment-methods-container">
+          <label class="radio-item">
+            <input
+              class="radio-input"
+              name="payment-method"
+              type="radio"
+              required
+              data-parsley-trigger="focusout"
+              data-parsley-required-message="This field is required"
+              value="1">
+            <span class="radio-choice-label">Credit/Debit Card</span>
+          </label>
+
+          <label class="radio-item">
+            <input
+              class="radio-input"
+              name="payment-method"
+              type="radio"
+              data-parsley-trigger="focusout"
+              value="6">
+            <span class="radio-choice-label">Paypal</span>
+          </label>
+
+          <label class="radio-item">
+            <input
+              class="radio-input"
+              name="payment-method"
+              type="radio"
+              data-parsley-trigger="focusout"
+              value="3">
+            <span class="radio-choice-label">Gcash</span>
+          </label>
+
+          <label class="radio-item">
+            <input
+              class="radio-input"
+              name="payment-method"
+              type="radio"
+              data-parsley-trigger="focusout"
+              value="18">
+            <span class="radio-choice-label">Online Banking</span>
+          </label>
+
+          <label class="radio-item">
+            <input
+              class="radio-input"
+              name="payment-method"
+              type="radio"
+              data-parsley-trigger="focusout"
+              value="19">
+            <span class="radio-choice-label">Cebuana Lhuillier</span>
+          </label>
+
+          <label class="radio-item">
+            <input
+              class="radio-input"
+              name="payment-method"
+              type="radio"
+              data-parsley-trigger="focusout"
+              value="20">
+            <span class="radio-choice-label">Over-the-Counter/ATM Payment</span>
+          </label>
+        </div>
+      </fieldset> -->
+
+    </div>
+
+    <div class="action-btn">
+      <button type="submit" class="btn btn-primary" id="pay-btn">
+        Proceed
+      </button>
+      <button type="button" class="btn btn-link">Back</button>
+    </div>
+  </div>
+</div>
