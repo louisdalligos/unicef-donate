@@ -1,0 +1,48 @@
+<div class="modal unicef-modal" id="exampleModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <form method="POST" action="#" data-parsley-validate="">
+            <div class="modal-body">
+                <p>I am donating and sharing hope on behalf of:</p>
+                <input
+                    type="text"
+                    name="donor[name]"
+                    class="form-control"
+                    placeholder="Full Name"
+                    required
+                    data-parsley-required-message="This field is required."
+                    data-parsley-trigger="focusout" />
+
+                <input
+                    type="email"
+                    name="donor[email]"
+                    class="form-control"
+                    placeholder="Email"
+                    required
+                    data-parsley-required-message="This field is required."
+                    data-parsley-trigger="focusout" />
+                <textarea
+                    rows="3"
+                    name="donor[message]"
+                    class="form-control"
+                    placeholder="Message"
+                    required
+                    data-parsley-required-message="This field is required."
+                    data-parsley-trigger="focusout">
+                </textarea>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1"><small>Make my dedicated donation anonymous</small></label>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Done</button>
+                <a class="btn btn-link" data-dismiss="modal">
+                Close
+                </button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>

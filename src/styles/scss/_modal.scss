@@ -1,0 +1,86 @@
+.unicef-modal {
+
+    .form-control {
+        border: 0;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        font-size: 0.875rem;
+        padding: 20px;
+    }
+
+    .modal-content {
+        background-color: #308fb3;
+        border-radius: 20px;
+        color: #FFF;
+        padding: 20px 10px;
+
+        .modal-body {
+            padding: 10px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 0.875rem;
+
+            @include respond-to("lg") {
+                text-align: left;
+            }
+        }
+
+        .form-check {
+            width: 255px;
+            margin: auto;
+
+            @include respond-to("lg") {
+                width: initial;
+                margin: initial;
+            }
+        }
+
+        .form-check-input {
+            margin-top: .45rem
+        }
+    }
+
+    .modal-footer {
+        border-top: 0;
+        justify-content: center;
+        display: inline;
+
+        @include respond-to("lg") {
+            display: flex
+        }
+
+
+        .btn {
+            font-size: 0.75rem;
+            display: block;
+
+            @include respond-to("lg") {
+                display: inline
+            }
+        }
+
+        .btn-primary {
+            width: 100px;
+            margin: auto;
+            text-transform: uppercase;
+
+            @include respond-to("lg") {
+                width: auto;
+                margin: initial
+            }
+        }
+
+        .btn-link {
+            color: #FFF;
+            text-decoration: underline;
+        }
+    }
+
+    .parsley-errors-list {
+        margin: 0 0 20px 10px;
+        color: white;
+    }
+
+}

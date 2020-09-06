@@ -59,7 +59,11 @@
                             </div>
                           </div>
                         </div>
-                        <a href="#" class="mt-3 d-block"
+                        <a
+                          href="#"
+                          data-toggle="modal"
+                          data-target="#exampleModal"
+                          class="mt-3 d-block"
                           ><small>Donate for a friend or family</small></a
                         >
                       </div>
@@ -75,6 +79,7 @@
         </div>
       </div>
     </main>
-    <%= require('html-loader!./partials/footer.html') %>
+    <%= require('html-loader!./partials/footer.html') %> <%=
+    require('html-loader!./components/donate-modal.html') %>
   </body>
 </html>
