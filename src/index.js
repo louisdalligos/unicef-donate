@@ -4,6 +4,8 @@ import "./vendor/jquery";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "popper.js/dist/popper.min.js";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel";
 
 import "@scss/main.scss";
 
@@ -37,5 +39,20 @@ $(document).ready(function () {
         $(this).removeClass("selected");
       }
     });
+  });
+
+  // carousel
+  $(".nonloop").owlCarousel({
+    loop: true,
+    dots: true,
+    autoWidth: true,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      600: {
+        items: 3,
+      },
+    },
   });
 });
