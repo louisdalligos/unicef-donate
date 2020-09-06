@@ -1,11 +1,184 @@
 .success-banner {
-    height: 300px;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include respond-to("lg") {
+    height: 480px;
+    background-position: 20% 28%;
+  }
+}
+
+.message-container {
+  padding: 40px 20px;
+
+  .d-flex {
+    justify-content: center;
 
     @include respond-to("lg") {
-        height: 480px;
-        background-position: 20% 28%;
+      justify-content: initial;
     }
+  }
+
+  h2 {
+    color: $theme-color;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 25px;
+
+    @include respond-to("lg") {
+      text-align: left;
+      font-size: 1.8rem;
+      width: 90%;
+    }
+  }
+
+  p {
+    font-size: 0.875rem;
+    text-align: center;
+
+    @include respond-to("lg") {
+      text-align: left;
+    }
+  }
+
+  .btn {
+    margin-right: 10px;
+    padding: 10px 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.share-donate-container {
+  border-top: 1px solid $gray;
+  margin: 40px 20px;
+  background-color: #fff;
+  padding-top: 30px;
+
+  p {
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  @include respond-to("lg") {
+    border-top: 0;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+
+    p {
+      width: 70%;
+      margin: 0 auto 20px;
+    }
+  }
+
+  .copy-link-wrap {
+    border-top: 1px solid #9b9b9b;
+    padding-top: 30px;
+    margin-top: 30px;
+
+    @include respond-to("lg") {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 15px;
+    }
+
+    strong {
+      font-size: 0.875rem;
+    }
+
+    .form-control {
+      background: #f3f3f3;
+      border: 0;
+    }
+
+    .input-group {
+      margin-bottom: 35px;
+
+      @include respond-to("lg") {
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+    }
+
+    .input-group-append {
+      .btn {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-left: -12px;
+        width: 80px;
+
+        @include respond-to("lg") {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+      }
+    }
+
+    .btn-back-home {
+      margin: auto;
+      width: 120px;
+      display: block;
+      line-height: 26px;
+
+      @include respond-to("lg") {
+        display: initial;
+      }
+    }
+
+    .section {
+      @include respond-to("lg") {
+        display: flex;
+      }
+    }
+  }
+  // icons
+  .social-links {
+    a {
+      font-size: 2rem;
+      color: #fff;
+      background-color: $theme-color;
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    small {
+      display: block;
+    }
+
+    .fa-facebook {
+      font-size: 2.9rem;
+      position: absolute;
+      bottom: -4px;
+      right: 8px;
+    }
+
+    .fa-twitter {
+      font-size: 2.6rem;
+      position: absolute;
+      top: 6px;
+      left: 6px;
+    }
+  }
+}
+
+.btn-custom {
+  border-radius: 10px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+
+  @include respond-to("lg") {
+    border-radius: 5px;
+  }
 }

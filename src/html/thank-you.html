@@ -10,11 +10,67 @@
   <body class="">
     <%= require('html-loader!./partials/header.html') %>
     <main role="main" class="main-section">
-      <div class="container-fluid p-0 thank-you-section">
+      <div class="thank-you-section">
         <div
           class="success-banner"
           style="background-image: url(./../assets/images/thank-you-banner.jpg)"
         ></div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="message-container">
+                <h2>Thank you for pitching in your share of tomorrow.</h2>
+                <p>
+                  Even in these turbulent times, we know that good days are
+                  still possible if we all do our part. Your donation to the
+                  UNICEF Basket of Hope will help shape a brighter future for
+                  Filipino children.
+                </p>
+
+                <p>
+                  The fuller the basket, the more children we can help. Let us
+                  continue this cycle of kindness to make it possible.
+                </p>
+
+                <div class="d-flex mt-5">
+                  <button type="button" class="btn btn-primary btn-custom">
+                    Donate Again
+                  </button>
+                  <button type="button" class="btn btn-primary btn-custom">
+                    Donate Monthly
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="share-donate-container">
+                <p>
+                  Pass the basket forward and invite your friends to fill the
+                  basket with us.
+                </p>
+
+                <ul class="list-inline text-center mb-0 social-links">
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></a><small>Facebook</small></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></a><small>Twitter</small></li>
+                </ul>
+
+                <div class="copy-link-wrap">
+                  <strong>Copy link</strong>
+                  <div class="section">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="unicef.org/sharelink" aria-label="unicef.org/sharelink">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary btn-custom" type="button">Copy</button>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-custom btn-back-home" type="button">Home</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <%= require('html-loader!./partials/footer.html') %>
