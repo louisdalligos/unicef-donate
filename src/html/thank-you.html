@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width,initial- scale=1" />
+    <%= require('html-loader!./partials/head.html') %>
+  </head>
+  <body class="">
+    <%= require('html-loader!./partials/header.html') %>
+    <main role="main" class="main-section">
+      <div class="container-fluid p-0 thank-you-section">
+        <div
+          class="success-banner"
+          style="background-image: url(./../assets/images/thank-you-banner.jpg)"
+        ></div>
+      </div>
+    </main>
+    <%= require('html-loader!./partials/footer.html') %>
+  </body>
+</html>

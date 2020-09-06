@@ -1,0 +1,11 @@
+.success-banner {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include respond-to("lg") {
+        height: 480px;
+        background-position: 20% 28%;
+    }
+}

@@ -78,6 +78,17 @@ module.exports = {
         collapseWhitespace: false,
       },
     }),
+    new HtmlWebpackPlugin({
+      title:
+        "UNICEF Basket of Hope-Donate and Give Hope to Children This Christmas",
+      template: "./src/html/thank-you.html",
+      filename: "thank-you.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+    }),
     new MiniCssExtractPlugin({
       filename: "style.[chunkhash].css",
     }),
