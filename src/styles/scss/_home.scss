@@ -8,14 +8,23 @@
 
 .home-banner {
   position: relative;
+  cursor: pointer;
 
   .cover {
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
+    background-size: 100%;
+    background-position: top left;
+    height: 600px;
     color: #fff;
-    margin-top: -2px;
+
+    @include respond-to("lg") {
+      height: 500px;
+    }
+
+    @include respond-to("xl") {
+      background-position: top center;
+      height: 90vh;
+    }
   }
 
   .banner-text {
@@ -29,22 +38,6 @@
 
       @include respond-to("lg") {
         font-size: 3rem;
-      }
-    }
-  }
-
-  #arrow-down {
-    position: absolute;
-    bottom: 12%;
-    right: 5%;
-
-    img {
-      width: 30px;
-    }
-
-    @include respond-to("lg") {
-      img {
-        width: 40px;
       }
     }
   }
@@ -99,12 +92,21 @@
 
   h2 {
     margin-bottom: 30px;
+    font-size: 1.4rem;
+
+    @include respond-to("lg") {
+
+      font-size: 2rem
+    }
   }
 
   p {
+    font-size: 0.6rem;
+
     @include respond-to("lg") {
       width: 74%;
       margin: auto;
+      font-size: inherit
     }
   }
 }
@@ -420,6 +422,7 @@
     .owl-item.cloned {
       display: none !important;
     }
+
     .owl-stage {
       transform: none !important;
       transition: none !important;
@@ -427,6 +430,7 @@
       margin-left: -7px;
       margin-right: -7px;
     }
+
     .owl-item {
       width: auto !important;
       flex: 0 0 33.333333%;

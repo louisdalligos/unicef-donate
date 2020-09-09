@@ -19,4 +19,21 @@
             background-position: 15%;
         }
     }
+
+    #arrow-down {
+        position: fixed;
+        bottom: 12%;
+        right: 5%;
+        z-index: 50;
+
+        img {
+            width: 30px;
+        }
+
+        @include respond-to("lg") {
+            img {
+                width: 40px;
+            }
+        }
+    }
 }
