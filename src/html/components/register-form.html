@@ -159,10 +159,19 @@
     </div>
 
     <div class="action-btn">
-      <button type="submit" class="btn btn-primary" id="pay-btn">
-        Proceed
-      </button>
-      <button type="button" class="btn btn-link">Back</button>
+      <div class="row flex-column-reverse flex-sm-row">
+
+        <div class="col-sm-3">
+          <button type="submit" class="btn btn-primary" id="pay-btn">Proceed</button>
+        </div>
+        <div class="col-sm-9">
+          <a id="go-back" data-title="Are you sure you want to go back?" href="index.html" class="btn btn-link">Back</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="data-privacy-info">
+      <small>By making a donation, you agree to our <a href="https://donate.unicef.ph/privacy-policy" target="_blank">Privacy Policy</a> and will be redirected to our secure payment gateway.</small>
     </div>
   </div>
 </div>

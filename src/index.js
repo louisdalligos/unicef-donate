@@ -6,45 +6,44 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "popper.js/dist/popper.min.js";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
-
 import "@scss/main.scss";
 
 $(document).ready(function () {
   console.log("Test jquery");
 
-  // $("#arrow-down, .home-banner").on("click", function (event) {
-  //   if (this.hash !== "") {
-  //     event.preventDefault();
+  $("#arrow-down").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
 
-  //     var hash = this.hash;
+      var hash = this.hash;
 
-  //     $("html, body").animate(
-  //       {
-  //         scrollTop: $(hash).offset().top + 8,
-  //       },
-  //       800
-  //     );
-  //   }
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top + 8,
+        },
+        800
+      );
+    }
+  });
+
+  // $(".cover").click(function () {
+  //   $("html, body").animate(
+  //     {
+  //       scrollTop: $("#donate-now").offset().top,
+  //     },
+  //     1000
+  //   );
   // });
 
-  $(".home-banner").click(function () {
-    $("html, body").animate(
-      {
-        scrollTop: $(".x85lsu8lZie").offset().top,
-      },
-      1000
-    );
-  });
-
-  $("#arrow-down").click(function (e) {
-    e.preventDefault();
-    $("html, body").animate(
-      {
-        scrollTop: $("#donate-now").offset().top,
-      },
-      1000
-    );
-  });
+  // $("#arrow-down").click(function (e) {
+  //   e.preventDefault();
+  //   $("html, body").animate(
+  //     {
+  //       scrollTop: $(".x85lsu8lZie ").offset().top,
+  //     },
+  //     1000
+  //   );
+  // });
 
   $(".payment-method-option").on("click", function () {
     var paymentValue = $(this).find("input").val();
@@ -111,5 +110,24 @@ $(document).ready(function () {
     }
 
     $('input[name="quantity"]').val(newVal);
+  });
+
+  // Confirm
+  $("#go-back").confirm({
+    content: "This will reset your donation cart.",
+    buttons: {
+      goback: {
+        text: "Go Back",
+        btnClass: "btn-link",
+        action: function () {
+          location.href = this.$target.attr("href");
+        },
+      },
+      continueCheckout: {
+        text: "Continue checkout",
+        btnClass: "btn-primary",
+        keys: ["enter"],
+      },
+    },
   });
 });
