@@ -11,12 +11,10 @@ import "@scss/main.scss";
 $(document).ready(function () {
   console.log("Test jquery");
 
-  $("#arrow-down").on("click", function (event) {
+  $("#arrow-down, .go-to-basket").on("click", function (event) {
     if (this.hash !== "") {
       event.preventDefault();
-
       var hash = this.hash;
-
       $("html, body").animate(
         {
           scrollTop: $(hash).offset().top + 8,
@@ -25,25 +23,6 @@ $(document).ready(function () {
       );
     }
   });
-
-  // $(".cover").click(function () {
-  //   $("html, body").animate(
-  //     {
-  //       scrollTop: $("#donate-now").offset().top,
-  //     },
-  //     1000
-  //   );
-  // });
-
-  // $("#arrow-down").click(function (e) {
-  //   e.preventDefault();
-  //   $("html, body").animate(
-  //     {
-  //       scrollTop: $(".x85lsu8lZie ").offset().top,
-  //     },
-  //     1000
-  //   );
-  // });
 
   $(".payment-method-option").on("click", function () {
     var paymentValue = $(this).find("input").val();

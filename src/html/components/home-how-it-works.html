@@ -100,9 +100,19 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">P</span>
                 </div>
-                <input type="text" class="form-control" placeholder="300" />
+                <input
+                  id="custom-amount"
+                  type="text"
+                  class="form-control"
+                  value="300"
+                  placeholder="300"
+                />
                 <div class="input-group-append">
-                  <button class="btn btn-primary btn-desktop" type="button">
+                  <button
+                    onClick="customAmount()"
+                    class="btn btn-primary btn-desktop"
+                    type="button"
+                  >
                     Donate Now
                   </button>
                 </div>
@@ -112,9 +122,12 @@
                   of P300.
                 </div>
               </div>
-              <a class="btn btn-primary btn-mobile" href="#" role="button"
-                >Donate now</a
+              <button
+                onClick="customAmount()"
+                class="btn btn-primary btn-mobile"
               >
+                Donate now
+              </button>
             </div>
           </div>
         </div>
@@ -122,3 +135,17 @@
     </div>
   </div>
 </section>
+
+<script>
+  function customAmount() {
+    var amount = $("#custom-amount").val();
+
+    if (amount !== "" && amount >= 300) {
+      window.location.replace("wp-json/unicef/v1/inspired/" + amount + "/add");
+      $(".invalid-feedback").hide();
+    } else {
+      $(".input-group").addClass("has-error");
+      $(".invalid-feedback").show();
+    }
+  }
+</script>
